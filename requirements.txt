@@ -1,0 +1,22 @@
+# Roblox Rants Content Pipeline — Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# ── Core Video Processing ─────────────────────────────────────────────────
+moviepy==1.0.3          # Video editing, compositing, subtitle overlays
+ffmpeg-python==0.2.0    # Direct ffmpeg wrapper (used by moviepy internally)
+
+# ── AI / LLM ──────────────────────────────────────────────────────────────
+openai>=1.30.0          # Script generation via GPT-4o-mini
+
+# ── TTS / Voiceover ───────────────────────────────────────────────────────
+requests>=2.31.0        # HTTP calls to ElevenLabs API
+elevenlabs>=1.0.0       # Official ElevenLabs SDK (optional, requests used directly)
+
+# ── Utilities ─────────────────────────────────────────────────────────────
+python-dotenv>=1.0.0    # Load .env files for API keys
+tqdm>=4.66.0            # Progress bars for batch mode
+
+# ── Image / Font support for subtitles ───────────────────────────────────
+Pillow>=10.0.0          # Image manipulation used by moviepy TextClip
+imageio>=2.34.0         # Backend for moviepy
+imageio-ffmpeg>=0.4.9   # ffmpeg binaries for imageio

@@ -1,0 +1,113 @@
+{
+  "pipeline": {
+    "num_variations": 5,
+    "batch_mode": false,
+    "batch_size": 20
+  },
+  "assets_dir": "assets",
+  "clip": {
+    "min_length_seconds": 30,
+    "max_length_seconds": 35,
+    "speed_variation_min": 0.97,
+    "speed_variation_max": 1.03,
+    "zoom_variation_px": 10,
+    "zoom_pulse_interval_seconds": 4,
+    "zoom_pulse_scale": 1.02
+  },
+  "script": {
+    "min_words": 70,
+    "max_words": 100,
+    "max_regeneration_attempts": 3,
+    "intensity_level": 4,
+    "tone": "raw, emotional, 15-year-old venting to phone camera at 11pm",
+    "ollama_model": "gpt-oss:120b-cloud"
+  },
+  "voiceover": {
+    "target_duration_seconds": 30,
+    "max_duration_seconds": 35,
+    "speed_min": 0.97,
+    "speed_max": 1.03,
+    "max_speed_override": 1.08,
+    "voice_ids": [
+      "rachel",
+      "adam",
+      "bella",
+      "josh",
+      "elli",
+      "sam",
+      "nicole",
+      "arnold"
+    ],
+    "output_format": "mp3"
+  },
+  "subtitles": {
+    "presets": {
+      "default": {
+        "fontsize": 88,
+        "font": "Arial-Bold",
+        "color": "white",
+        "stroke_color": "black",
+        "stroke_width": 4,
+        "words_per_group": 2,
+        "bg_color": null
+      },
+      "hype": {
+        "fontsize": 96,
+        "font": "Arial-Bold",
+        "color": "#FFFF00",
+        "stroke_color": "black",
+        "stroke_width": 5,
+        "words_per_group": 2
+      },
+      "rage": {
+        "fontsize": 96,
+        "font": "Arial-Bold",
+        "color": "#FF4444",
+        "stroke_color": "black",
+        "stroke_width": 5,
+        "words_per_group": 2
+      }
+    },
+    "active_preset": "default",
+    "timing_variation_ms": 80,
+    "hook_overlay_duration_seconds": 1.5,
+    "hook_overlay_fontsize": 96,
+    "hook_overlay_color": "#FFFF00",
+    "subtitle_position_y_ratio": 0.75
+  },
+  "memes": {
+    "enable_memes": true,
+    "max_memes_per_video": 3,
+    "meme_display_duration": 1.5
+  },
+  "sfx": {
+    "enable_sfx": true,
+    "sfx_volume": 0.15,
+    "max_sfx_duration": 1.5,
+    "max_sfx_per_video": 4
+  },
+  "music": {
+    "enabled": false,
+    "volume": 0.08,
+    "file": "assets/bgm.mp3"
+  },
+  "output": {
+    "min_video_length": 30,
+    "max_video_length": 60,
+    "resolution_width": 1080,
+    "resolution_height": 1920,
+    "fps": 60,
+    "video_bitrate": "12000k",
+    "audio_bitrate": "256k",
+    "exports_folder": "exports",
+    "log_file": "logs/pipeline_log.csv"
+  },
+  "retention": {
+    "pattern_interrupt_enabled": true,
+    "pattern_interrupt_time": 3.0
+  },
+  "validation": {
+    "min_video_length": 25,
+    "max_video_length": 60
+  }
+}
